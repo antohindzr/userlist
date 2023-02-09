@@ -1,0 +1,24 @@
+[
+    {
+        "id": 11,
+        "name": "anto.hin2",
+        "number": 79506186812,
+        "email": "w2@op.ru",
+        "email_verified_at": null,
+        "password": "123456789911",
+        "remember_token": null,
+        "created_at": "2023-02-09T15:56:16.000000Z",
+        "updated_at": "2023-02-09T15:56:16.000000Z"
+    },
+    {
+        "id": 12,
+        "name": "anto.hin5",
+        "number": 79506186815,
+        "email": "w5@op.ru",
+        "email_verified_at": null,
+        "password": "123456789911",
+        "remember_token": null,
+        "created_at": "2023-02-09T15:57:29.000000Z",
+        "updated_at": "2023-02-09T15:57:29.000000Z"
+    }
+]
