@@ -34,7 +34,6 @@
           <td>remember_token</td>
           <td>created_at</td>
           <td>updated_at</td>
-          <td class="text-center">Action</td>
         </tr>
     </thead>
     <tbody>
@@ -48,16 +47,8 @@
             <td>{{$users->password}}</td>
             <td>{{$users->remember_token}}</td>
             <td>{{$users->created_at}}</td>
-            <td>{{$users->updated_at}}</td>
-            <td class="text-center">
-            <a href="{{ route('users.edit', $users->id)}}" class="btn btn-primary btn-sm">Edit</a>
-                <form action="{{ route('users.destroy', $users->id)}}" method="post" style="display: inline-block">
-               
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                  </form>
-            </td>
+            <td>{{$users->updated_at}}</td>           
+          </td>
           </tr>
         @endforeach
       </tbody>
@@ -80,7 +71,6 @@
           <td>remember_token</td>
           <td>created_at</td>
           <td>updated_at</td>
-          <td class="text-center">Action</td>
         </tr>
     </thead>
     <tbody>
@@ -94,15 +84,8 @@
             <td>{{$jsonusers->password}}</td>
             <td>{{$jsonusers->remember_token}}</td>
             <td>{{$jsonusers->created_at}}</td>
-            <td>{{$jsonusers->updated_at}}</td>
-            <td class="text-center">
-            <a href="{{ route('users.edit', $users->id)}}" class="btn btn-primary btn-sm">Edit</a>
-                <form action="{{ route('users.destroy', $users->id)}}" method="post" style="display: inline-block">
-               
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                  </form>
+            <td>{{$jsonusers->updated_at}}</td>            
+          </form>
             </td>
           </tr>
         @endforeach
@@ -126,7 +109,6 @@
           <td>remember_token</td>
           <td>created_at</td>
           <td>updated_at</td>
-          <td class="text-center">Action</td>
         </tr>
     </thead>
     <tbody>
@@ -141,14 +123,6 @@
             <td>{{$excelusers->remember_token}}</td>
             <td>{{$excelusers->created_at}}</td>
             <td>{{$excelusers->updated_at}}</td>
-            <td class="text-center">
-            <a href="{{ route('users.edit', $users->id)}}" class="btn btn-primary btn-sm">Edit</a>
-                <form action="{{ route('users.destroy', $users->id)}}" method="post" style="display: inline-block">
-               
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                  </form>
             </td>
           </tr>
         @endforeach

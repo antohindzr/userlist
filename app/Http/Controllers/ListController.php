@@ -61,33 +61,4 @@ class ListController extends Controller
              
         return redirect('/users')->withSuccess('Entry has been saved');
     }
- 
-    public function edit(int $id): Application|Factory|View
-    {
-        $user = User::findOrFail($id);
-        return view('editU', compact('user'));
-    }
-    public function update(Request $req, int $id): Application|RedirectResponse|Redirector
-    {
-        $data = $req->validate([
-            'name' => 'required|max:25',
-            'number' => 'required|min:11|max:11',
-            'email' => 'required|email',
-            'password' => 'required|min:8',
-        ]);
-        User::whereId($id)->update($data);
-        include 'toJson.php';
-               
-        include 'toExcel.php';
-        return redirect('/users')->withSuccess('Entry has been updated');
-    }
-    public function destroy(int $id): Application|RedirectResponse|Redirector
-    {
-        $user = User::findOrFail($id);
-        $user->delete();
-        include 'toJson.php';
-               
-        include 'toExcel.php';
-        return redirect('/users')->withSuccess('Entry has been deleted');
-    }
-}
+ }
